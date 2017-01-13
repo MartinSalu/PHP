@@ -16,6 +16,7 @@ class template
     // class variables
     var $file = ''; // template file name
     var $content = false; // template content - now is empty
+    var $vars= array();//table for real values of html template output
     // class methods
     // construct
     function __construct($f){
@@ -51,4 +52,24 @@ class template
     function readFile($f){
         $this->content = file_get_contents($f);
     }// readFile
+    //set up html table template elements and real values
+    //$name-template name
+    //$val-real value for template element
+    function set($name, $val){
+        $this->vars[$name] = $val;
+    }
+    //set
+
+    //parse template content and replace template table names by
+    //template table real values
+    function parse(){
+        $str =$this->content;
+        foreach ($this->vars as $name=>$val){
+            $str = str_replace('{'.$name.'}',$val,$str);
+        }
+        //return template content with values
+        return $str;
+    }//parse
+
+
 }// class end
