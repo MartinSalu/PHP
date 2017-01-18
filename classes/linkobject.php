@@ -8,6 +8,11 @@
  */
 
 //import http class
+//useful function
+function fixUrl($val){
+    return urlendcode($val);
+}
+
 require_once  'http.php';
 
 
