@@ -7,7 +7,6 @@
  * Time: 15:51
  */
 
-*/
 // useful function
 function fixHtml($val){
     return htmlentities($val);
@@ -58,4 +57,4 @@ class http
     }// get
 }// http end
 
-}
+?>
