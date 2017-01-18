@@ -8,6 +8,7 @@
 //create and template object
 define('CLASSES_DIR', 'classes/');
 define('TMPL_DIR', 'tmpl/');
+define('CSS_DIR','CSS/');
 require_once CLASSES_DIR.'template.php';
 // and use it
 // create an template object,
@@ -19,10 +20,11 @@ $tmpl->set('menu','minu menüü');
 $tmpl->set('nav_bar','minu navigatsioon');
 $tmpl->set('lang_bar','minu keeleriba');
 $tmpl->set('content','minu sisu');
+$tmpl->set('title','minu lehepealkiri');
 // control the content of template object
-echo '<pre>';
-print_r($tmpl);
-echo '</pre>';
+//echo '<pre>';
+// print_r($tmpl);
+//echo '</pre>';
 
 echo $tmpl->parse();
 

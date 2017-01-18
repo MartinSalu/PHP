@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>{title}</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
-    <table width="90%" border="1">
+    <table>
         <tr>
-            <td rowspan="2 width 30%">{menu}</td>
-            <td>{nav_bar}</td>
-            <td>{lang_bar}</td>
+            <td rowspan="2 width 30%" id="menu">{menu}</td><!--"-->
+            <td id="nav">{nav_bar}</td>
+            <td id="lang">{lang_bar}</td>
         </tr>
         <tr>
-            <td colspan="2">{content}</td>
+            <td colspan="2" id="content">{content}</td><!---->
         </tr>
     </table>
 
