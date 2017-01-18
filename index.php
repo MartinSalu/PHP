@@ -51,7 +51,9 @@ echo PHP_SELF.'<br />';
 echo SCRIPT_NAME.'<br />';
 echo HTTP_HOST.'<br />';
 echo '<hr />';
-// create http data pairs and set up into $http->vars array
+// create http data elements for url testing
+//name=value
+//
 $http->set('kasutaja', 'Martin');
 $http->set('tund', 'php programmeerimisvahendid');
 // control $http->vars object output
@@ -59,7 +61,7 @@ $http->set('tund', 'php programmeerimisvahendid');
 print_r($http->vars);
 echo '</pre>';*/
 // control link creation
-$link = $http->getLink(array('kasutaja'=>'anna', 'parool'=>'qwerty'));
+$link = $http->getLink(array('kasutaja'=>'martin', 'parool'=>'qwerty'));
 //echo $link.'<br />';
 // control http output
 //echo '<pre>';
