@@ -13,7 +13,7 @@ class mysql
     var $user = false; // database server user
     var $pass = false; // database server user password
     var $dbname = false; // database server user database
-    var $history = array(); // database query log array
+    var $history = array(); // database object log array
     // class methods
     // construct
     function __construct($h, $u, $p, $dn){
