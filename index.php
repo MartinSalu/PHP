@@ -41,7 +41,25 @@ echo '</pre>';
 */
 // output template content set up with real values
 echo $tmpl->parse();
-// control http object output
+
+// control database object
+// create test query
+$sql = 'SELECT NOW();';
+$res = $db->getArray($sql);
+$sql = 'SELECT NOW();';
+$res = $db->getArray($sql);
+$sql = 'SELECT NOW();';
+$res = $db->getArray($sql);
+// control database query result
+echo '<pre>';
+print_r($res);
+echo '</pre>';
+// query time control
+$db->showHistory();
+
+?>
+
+<!-- control http object output
 /*echo '<pre>';
 print_r($http);
 echo '</pre>';*/
@@ -74,4 +92,4 @@ $link = $http->getLink(array('kasutaja'=>'martin', 'parool'=>'qwerty'));
 // import act file
 require_once 'act.php';
 
-?>
+?>-->
